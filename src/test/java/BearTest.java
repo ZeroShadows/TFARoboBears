@@ -58,7 +58,7 @@ public class BearTest extends BaseTest{
 
         String observedBearName = getBearFromJson(observed).getBearName();
 
-        assertThat("Bear name doesn't changed", observedBearName, containsString(bearNameNew));
+        assertThat("Bear name doesn't changed", observedBearName.toUpperCase(), equalTo(bearNameNew.toUpperCase()));
     }
 
     private List<Bear> getListOfBears() {
