@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Bear {
 
+    @SerializedName("bear_id")
+    private int bearId;
+
     @SerializedName("bear_type")
     private String bearType;
 
@@ -12,6 +15,22 @@ public class Bear {
 
     @SerializedName("bear_age")
     private double bearAge;
+
+    public Bear(int bearId, String bearType, String bearName, double bearAge) {
+        this.bearId = bearId;
+        this.bearType = bearType;
+        this.bearName = bearName;
+        this.bearAge = bearAge;
+    }
+
+    public Bear(String bearType, String bearName, double bearAge) {
+        this.bearType = bearType;
+        this.bearName = bearName;
+        this.bearAge = bearAge;
+    }
+
+    public Bear() {
+    }
 
     public String getBearType() {
         return bearType;
@@ -35,6 +54,10 @@ public class Bear {
 
     public void setBearAge(double bearAge) {
         this.bearAge = bearAge;
+    }
+
+    public int getBearId() {
+        return bearId;
     }
 
     @Override
