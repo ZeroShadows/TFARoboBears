@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public abstract class BaseTest {
 
-    private static final String BASE_URI = "http://localhost:8080/";
+    private static final String BASE_URI = "http://localhost:8888/";
     Gson mapper = new Gson();
 
     @BeforeAll
